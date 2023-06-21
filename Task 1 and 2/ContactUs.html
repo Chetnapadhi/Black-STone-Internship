@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<style>
+    body {
+        font-family: monospace;
+        background-color: #575454;
+        color: #fff;
+    }
+    .heading {
+        text-align: center;
+        font-size: 45px;
+        border-bottom: 2px dotted #fff;
+    }
+    .container {
+        background-color: #696868;
+    }
+    .btn-info {
+        width: 50%;
+        letter-spacing: 2px;
+        background: transparent;
+        transition: all 0.5s ease-in-out;
+    }
+    .btn-info:hover {
+        transform: scale(1.05);
+    }
+    .icn {
+        font-family: monospace;
+        font-size: 17px;
+    }
+    hr {
+        width: 80%;
+    }
+    ul li a {
+        color: #fff;
+        float: left;
+        font-family: monospace;
+        font-size: 22px;
+        margin-left: 23px;
+        margin-right: 10px;
+        transition: 0.5s ease-in-out;
+    }
+    ul li a:hover {
+        color: #999;
+    }
+</style>
+<body>
+    <br><br>
+    <div class="container">
+        <h2 class="heading">Contact Us</h2>
+        <h2 style="text-align: center;">We'd love to help!!</h2>
+        <p style="text-align: center;">We like to create things with fun, open-minded please feel free to say hello</p>
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" onsubmit="return validateForm()" action='https://script.google.com/macros/s/AKfycbxKwTcJkJBmuetS9PLnxMI-LWOjX7KRWouhDnLfMMGLLw7aDP_XHH9lMgYnj0rXQeXu7Q/exec'>
+                    <input type="text" name="Name" required="" placeholder="Your Name" class="form-control">
+                    <br>
+                    <input type="email" name="Email" id="emailInput" required="" placeholder="Your Email" class="form-control">
+                    <br>
+                    <input type="text" name="Phone" id="phoneInput" required="" placeholder="Your Contact Number" class="form-control">
+                    <br>
+                    <input type="text" name="Pincode" required="" placeholder="Your Pincode" class="form-control">
+                    <br>
+                    <textarea cols="20" rows="3" type="text" name="Address" placeholder="Address" class="form-control"></textarea>
+                    <br>
+                    <textarea cols="5" rows="4" type="text" name="Message" placeholder="Message" class="form-control"></textarea>
+                    <br><br>
+                    <center>
+                        <button class="btn btn-info">Submit</button>
+                    </center>
+                    <br><br><br><br>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <br>
+                <p class="icn"><i class="fa fa-map-marker"></i> &nbsp;&nbsp; 23 Main, Street market malad, Mumbai </p>
+                <p class="icn"><i class="fa fa-phone"></i> &nbsp;&nbsp; 0123456789 </p>
+                <p class="icn"><i class="fa fa-envelope"></i> &nbsp;&nbsp; support@blackstonegamedevelopment.in </p>
+                <hr>
+                <div class="media">
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <br>
+                <p style="margin-left: 23px;">Web Designing by chetna</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var phoneInput = document.getElementById("phoneInput");
+            var phonePattern = /^\d{10}$/;
+
+            var emailInput = document.getElementById("emailInput");
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!phonePattern.test(phoneInput.value)) {
+                alert("Please enter a valid 10-digit phone number");
+                return false;
+            }
+
+            if (!emailPattern.test(emailInput.value)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</body>
+</html>

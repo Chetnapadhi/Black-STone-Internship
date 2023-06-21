@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+}
+
+#logo img {
+    width: 100px;
+    height: 90px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    font-size: 36px;
+    padding: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'calibri';
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #aaa;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    left: 0;
+    top: 100%;
+    border-radius: 5px;
+    position: absolute;
+    background: red;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 60%;
+    transform: translateX(50%);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("google.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+}
+
+.const2 ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.const2 ul li {
+    padding: 10px;
+    color: black;
+    font-size: 24px;
+}
+
+.const2 ul li:hover {
+    color: gray;
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        color: black;
+    }
+
+    .const2 ul li {
+        font-size: 20px;
+    }
+
+    .details {
+        font-size: 24px;
+    }
+}
